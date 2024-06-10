@@ -1,12 +1,26 @@
 import { Link } from "react-router-dom";
 import Logo from '../../content/images/logo.png';
 import Links from "../Utilities/Links";
-//import HeaderData from '../../content/data/header.json';
+import { useHistory, useLocation } from 'react-router-dom';
+import { useEffect, useState } from "react";
 
 const Header = (props) => {
 
+    const [headerClass, setHeaderClass] = useState('');
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.pathname.substring(1).length > 0) {
+            setHeaderClass('black-header');
+        } else {
+            setHeaderClass('');
+        }
+    }, [location]);
+
+    const classes = headerClass;
+
     return (
-        <header>
+        <header className={classes}>
             <nav className="navbar">
                 <div className="container">
                     <div className="navbar-header">

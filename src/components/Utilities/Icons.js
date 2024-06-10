@@ -19,6 +19,10 @@ const Icons = (props) => {
             break;
         case 'email': content = <img src={require('../../content/images/icons/email.png')} className='icon' />;
             break;
+        case 'left-arrow': content = <img src={require('../../content/images/icons/left.png')} className='icon-arrow' />;
+            break;
+        case 'right-arrow': content = <img src={require('../../content/images/icons/right.png')} className='icon-arrow' />;
+            break;
     }
 
     return (

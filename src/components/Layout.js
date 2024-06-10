@@ -5,10 +5,11 @@ import CopyRight from '../components/Footer/CopyRight';
 
 
 const Layout = () => {
+
     return (
         <>
             <Header />
-            <div className="container"><Outlet /></div>
+            <Outlet />
             <footer><Footer /></footer>
             <CopyRight />
         </>
